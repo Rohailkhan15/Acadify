@@ -221,6 +221,7 @@ const universities = [
 Primary reach for the Pakistani student audience:
 - **WhatsApp groups** (student groups, FSc/Matric result seasons)
 - **Facebook groups** (university admissions, student communities)
+- **Reddit**
 
 Admission season (May–August) is the critical traffic window.
 
