@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Primary SEO -->
-<title>Acadrez — Free Aggregate Calculator for Pakistani Universities</title>
-<meta name="description" content="Calculate your university aggregate instantly. Free, accurate merit calculator for NUST, FAST, UET, COMSATS, PIEAS, GIKI and 15+ top Pakistani universities. No login required."/>
-<meta name="keywords" content="aggregate calculator Pakistan, university merit calculator, NUST aggregate calculator, FAST aggregate, UET merit calculator, COMSATS aggregate, PIEAS merit, GIKI aggregate, Pakistani university admission, merit calculator 2025, FSc aggregate, matric aggregate calculator"/>
-<meta name="author" content="Acadrez"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://acadify.pages.dev/"/>
+  <!-- Primary SEO -->
+  <title>Acadrez — Free Aggregate Calculator for Pakistani Universities</title>
+  <meta name="description"
+    content="Calculate your university aggregate instantly. Free, accurate merit calculator for NUST, FAST, UET, COMSATS, PIEAS, GIKI and 15+ top Pakistani universities. No login required." />
+  <meta name="keywords"
+    content="aggregate calculator Pakistan, university merit calculator, NUST aggregate calculator, FAST aggregate, UET merit calculator, COMSATS aggregate, PIEAS merit, GIKI aggregate, Pakistani university admission, merit calculator 2025, FSc aggregate, matric aggregate calculator" />
+  <meta name="author" content="Acadrez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://acadrez.pages.dev/" />
 
-<!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Acadrez — Free Aggregate Calculator for Pakistani Universities"/>
-<meta property="og:description" content="Calculate your university aggregate instantly for NUST, FAST, UET, COMSATS and 15+ Pakistani universities. Free, no login, results in under 60 seconds."/>
-<meta property="og:url" content="https://acadify.pages.dev/"/>
-<meta property="og:site_name" content="Acadrez"/>
-<meta property="og:locale" content="en_PK"/>
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Acadrez — Free Aggregate Calculator for Pakistani Universities" />
+  <meta property="og:description"
+    content="Calculate your university aggregate instantly for NUST, FAST, UET, COMSATS and 15+ Pakistani universities. Free, no login, results in under 60 seconds." />
+  <meta property="og:url" content="https://acadrez.pages.dev/" />
+  <meta property="og:site_name" content="Acadrez" />
+  <meta property="og:locale" content="en_PK" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Acadrez — Free Aggregate Calculator for Pakistani Universities"/>
-<meta name="twitter:description" content="Instant, accurate aggregate calculator for NUST, FAST, UET, COMSATS and 15+ Pakistani universities. Free, no login required."/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Acadrez — Free Aggregate Calculator for Pakistani Universities" />
+  <meta name="twitter:description"
+    content="Instant, accurate aggregate calculator for NUST, FAST, UET, COMSATS and 15+ Pakistani universities. Free, no login required." />
 
-<!-- JSON-LD Structured Data: WebApplication -->
-<script type="application/ld+json">
+  <!-- JSON-LD Structured Data: WebApplication -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Acadrez",
-  "url": "https://acadify.pages.dev/",
+  "url": "https://acadrez.pages.dev/",
   "description": "Free aggregate calculator for Pakistani university admissions. Calculate your merit for NUST, FAST, UET, COMSATS, PIEAS, GIKI and more.",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Any",
@@ -49,8 +54,8 @@
 }
 </script>
 
-<!-- JSON-LD Structured Data: FAQPage (boosts rich results in Google) -->
-<script type="application/ld+json">
+  <!-- JSON-LD Structured Data: FAQPage (boosts rich results in Google) -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -98,328 +103,437 @@
   ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<style>
-  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-  .paper-shadow { box-shadow: 0px 2px 4px rgba(26,54,93,0.05), 0px 4px 16px rgba(26,54,93,0.08); }
-  .accent-bar::before { content:''; display:block; height:3px; background:#002045; width:100%; border-radius:2px 2px 0 0; }
-  .uni-dropdown { position:absolute; top:calc(100% + 4px); left:0; right:0; background:#fff; border:1.5px solid #c4c6cf; border-radius:8px; box-shadow:0 4px 16px rgba(26,46,74,0.13); z-index:200; max-height:360px; overflow-y:auto; display:none; }
-  .uni-option { padding:9px 14px; font-size:0.92rem; color:#191c1d; cursor:pointer; border-bottom:1px solid #edeeef; transition:background 0.12s; }
-  .uni-option:last-child { border-bottom:none; }
-  .uni-option:hover { background:#d6e3ff; color:#002045; }
-  .uni-no-results { padding:10px 14px; font-size:0.88rem; color:#74777f; font-style:italic; cursor:default; }
-  .error-input { border-color:#ba1a1a !important; background:#fff5f5 !important; }
-  .result-high { color:#1a7a4a; }
-  .result-mid  { color:#b35a00; }
-  .result-low  { color:#ba1a1a; }
-  .weightage-fill { transition: stroke-dashoffset 0.8s cubic-bezier(0.4,0,0.2,1); }
-  @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-  .fade-up { animation: fadeUp 0.4s ease both; }
-</style>
-<script>tailwind.config={theme:{extend:{fontFamily:{display:['Lexend','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .paper-shadow {
+      box-shadow: 0px 2px 4px rgba(26, 54, 93, 0.05), 0px 4px 16px rgba(26, 54, 93, 0.08);
+    }
+
+    .accent-bar::before {
+      content: '';
+      display: block;
+      height: 3px;
+      background: #002045;
+      width: 100%;
+      border-radius: 2px 2px 0 0;
+    }
+
+    .uni-dropdown {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1.5px solid #c4c6cf;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(26, 46, 74, 0.13);
+      z-index: 200;
+      max-height: 360px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .uni-option {
+      padding: 9px 14px;
+      font-size: 0.92rem;
+      color: #191c1d;
+      cursor: pointer;
+      border-bottom: 1px solid #edeeef;
+      transition: background 0.12s;
+    }
+
+    .uni-option:last-child {
+      border-bottom: none;
+    }
+
+    .uni-option:hover {
+      background: #d6e3ff;
+      color: #002045;
+    }
+
+    .uni-no-results {
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: #74777f;
+      font-style: italic;
+      cursor: default;
+    }
+
+    .error-input {
+      border-color: #ba1a1a !important;
+      background: #fff5f5 !important;
+    }
+
+    .result-high {
+      color: #1a7a4a;
+    }
+
+    .result-mid {
+      color: #b35a00;
+    }
+
+    .result-low {
+      color: #ba1a1a;
+    }
+
+    .weightage-fill {
+      transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.4s ease both;
+    }
+  </style>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { display: ['Lexend', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }</script>
 </head>
+
 <body class="bg-[#f8f9fa] text-[#191c1d] font-body min-h-screen">
 
-<!-- NAV -->
-<nav class="sticky top-0 z-50 bg-[#f8f9fa]/95 backdrop-blur border-b border-[#e1e3e4] shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-    <a href="index.html" class="font-display font-bold text-lg text-[#002045] tracking-tight">Acadrez</a>
-    <div class="hidden md:flex items-center gap-6 font-display text-sm font-medium">
-      <a href="index.html" class="text-[#002045] font-semibold border-b-2 border-[#002045] pb-0.5">Home</a>
-      <a href="universities.html" class="text-[#43474e] hover:text-[#002045] transition-colors">Universities</a>
-      <a href="how-it-works.html" class="text-[#43474e] hover:text-[#002045] transition-colors">How it Works</a>
-      <a href="about.html" class="text-[#43474e] hover:text-[#002045] transition-colors">About</a>
-    </div>
-    <div class="flex items-center gap-2"><a href="universities.html" class="bg-[#002045] text-white font-display font-semibold text-sm px-4 py-2 rounded-lg hover:bg-[#1a365d] transition-colors active:scale-95">Universities</a>
-    <button onclick="shareAcadify(this)" title="Share Acadrez" class="flex items-center gap-1.5 border border-[#c4c6cf] text-[#43474e] font-display font-semibold text-sm px-3 py-2 rounded-lg hover:border-[#002045] hover:text-[#002045] transition-colors active:scale-95"><span class="material-symbols-outlined text-[16px]">share</span>Share</button>
-    </div>
-  </div>
-  <!-- Mobile nav -->
-  <div class="md:hidden flex gap-4 px-4 pb-2 font-display text-xs font-medium overflow-x-auto">
-    <a href="index.html" class="text-[#002045] font-semibold whitespace-nowrap border-b border-[#002045]">Home</a>
-    <a href="universities.html" class="text-[#43474e] whitespace-nowrap">Universities</a>
-    <a href="how-it-works.html" class="text-[#43474e] whitespace-nowrap">How it Works</a>
-    <a href="about.html" class="text-[#43474e] whitespace-nowrap">About</a>
-  
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-8">
-  <div class="text-center max-w-2xl mx-auto mb-10 fade-up">
-    <div class="inline-block bg-[#d6e3ff] text-[#002045] font-display font-semibold text-xs px-3 py-1 rounded-full mb-4 tracking-wide uppercase">Free · No Login · Results in 60 Seconds</div>
-    <h1 class="font-display font-bold text-4xl sm:text-5xl text-[#002045] leading-tight mb-4">Calculate Your University Aggregate</h1>
-    <p class="text-[#43474e] text-base sm:text-lg leading-relaxed mb-6">Enter your marks and get an instant, accurate aggregate for top Pakistani universities — in under 60 seconds.</p>
-    <a href="#calculator" class="inline-block bg-[#2c694e] text-white font-display font-semibold px-6 py-3 rounded-xl hover:bg-[#1e4f3a] transition-colors active:scale-95 shadow-md">Get Started ↓</a>
-  </div>
-
-  <!-- Stats strip -->
-  <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto mb-12">
-    <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
-      <div class="font-display font-bold text-xl text-[#002045]">15+</div>
-      <div class="text-xs text-[#74777f] font-medium">Universities</div>
-    </div>
-    <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
-      <div class="font-display font-bold text-xl text-[#002045]">60s</div>
-      <div class="text-xs text-[#74777f] font-medium">To Calculate</div>
-    </div>
-    <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
-      <div class="font-display font-bold text-xl text-[#002045]">100%</div>
-      <div class="text-xs text-[#74777f] font-medium">Accurate</div>
-    </div>
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section id="calculator" class="max-w-2xl mx-auto px-4 sm:px-6 pb-16">
-  <div class="bg-white rounded-2xl paper-shadow border border-[#e1e3e4]">
-    <div class="h-1 bg-[#002045] w-full rounded-t-2xl"></div>
-    <div class="p-5 sm:p-7">
-      <h2 class="font-display font-bold text-xl text-[#002045] mb-1">Aggregate Calculator</h2>
-      <p class="text-sm text-[#74777f] mb-5">Choose manual entry or pick a university for preset formulas.</p>
-
-      <!-- Mode toggle -->
-      <div class="flex gap-2 bg-[#f3f4f5] rounded-xl p-1 mb-5">
-        <button type="button" id="mode-manual" class="mode-btn flex-1 py-2 rounded-lg font-display font-semibold text-sm transition-all bg-[#002045] text-white shadow">Manual</button>
-        <button type="button" id="mode-university" class="mode-btn flex-1 py-2 rounded-lg font-display font-semibold text-sm transition-all text-[#43474e]">By University</button>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#f8f9fa]/95 backdrop-blur border-b border-[#e1e3e4] shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="index.html" class="font-display font-bold text-lg text-[#002045] tracking-tight">Acadrez</a>
+      <div class="hidden md:flex items-center gap-6 font-display text-sm font-medium">
+        <a href="index.html" class="text-[#002045] font-semibold border-b-2 border-[#002045] pb-0.5">Home</a>
+        <a href="universities.html" class="text-[#43474e] hover:text-[#002045] transition-colors">Universities</a>
+        <a href="how-it-works.html" class="text-[#43474e] hover:text-[#002045] transition-colors">How it Works</a>
+        <a href="about.html" class="text-[#43474e] hover:text-[#002045] transition-colors">About</a>
       </div>
-
-      <!-- Manual controls -->
-      <div id="manual-controls" class="flex items-center gap-3 mb-4">
-        <label for="mark-sources" class="font-display font-semibold text-sm text-[#002045] whitespace-nowrap">Sources:</label>
-        <select id="mark-sources" class="flex-1 px-3 py-2 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+      <div class="flex items-center gap-2"><a href="universities.html"
+          class="bg-[#002045] text-white font-display font-semibold text-sm px-4 py-2 rounded-lg hover:bg-[#1a365d] transition-colors active:scale-95">Universities</a>
+        <button onclick="shareAcadify(this)" title="Share Acadrez"
+          class="flex items-center gap-1.5 border border-[#c4c6cf] text-[#43474e] font-display font-semibold text-sm px-3 py-2 rounded-lg hover:border-[#002045] hover:text-[#002045] transition-colors active:scale-95"><span
+            class="material-symbols-outlined text-[16px]">share</span>Share</button>
       </div>
+    </div>
+    <!-- Mobile nav -->
+    <div class="md:hidden flex gap-4 px-4 pb-2 font-display text-xs font-medium overflow-x-auto">
+      <a href="index.html" class="text-[#002045] font-semibold whitespace-nowrap border-b border-[#002045]">Home</a>
+      <a href="universities.html" class="text-[#43474e] whitespace-nowrap">Universities</a>
+      <a href="how-it-works.html" class="text-[#43474e] whitespace-nowrap">How it Works</a>
+      <a href="about.html" class="text-[#43474e] whitespace-nowrap">About</a>
 
-      <!-- University controls -->
-      <div id="university-controls" style="display:none;" class="mb-4">
-        <div class="relative">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#74777f] text-[18px]">search</span>
-          <input type="text" id="university-search" placeholder="Search university…" autocomplete="off"
-            class="w-full pl-9 pr-3 py-2.5 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10"/>
-          <div id="uni-dropdown" class="uni-dropdown"></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-8">
+    <div class="text-center max-w-2xl mx-auto mb-10 fade-up">
+      <div
+        class="inline-block bg-[#d6e3ff] text-[#002045] font-display font-semibold text-xs px-3 py-1 rounded-full mb-4 tracking-wide uppercase">
+        Free · No Login · Results in 60 Seconds</div>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl text-[#002045] leading-tight mb-4">Calculate Your
+        University Aggregate</h1>
+      <p class="text-[#43474e] text-base sm:text-lg leading-relaxed mb-6">Enter your marks and get an instant, accurate
+        aggregate for top Pakistani universities — in under 60 seconds.</p>
+      <a href="#calculator"
+        class="inline-block bg-[#2c694e] text-white font-display font-semibold px-6 py-3 rounded-xl hover:bg-[#1e4f3a] transition-colors active:scale-95 shadow-md">Get
+        Started ↓</a>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto mb-12">
+      <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
+        <div class="font-display font-bold text-xl text-[#002045]">15+</div>
+        <div class="text-xs text-[#74777f] font-medium">Universities</div>
+      </div>
+      <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
+        <div class="font-display font-bold text-xl text-[#002045]">60s</div>
+        <div class="text-xs text-[#74777f] font-medium">To Calculate</div>
+      </div>
+      <div class="bg-white rounded-xl p-3 text-center paper-shadow border border-[#e1e3e4]">
+        <div class="font-display font-bold text-xl text-[#002045]">100%</div>
+        <div class="text-xs text-[#74777f] font-medium">Accurate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="max-w-2xl mx-auto px-4 sm:px-6 pb-16">
+    <div class="bg-white rounded-2xl paper-shadow border border-[#e1e3e4]">
+      <div class="h-1 bg-[#002045] w-full rounded-t-2xl"></div>
+      <div class="p-5 sm:p-7">
+        <h2 class="font-display font-bold text-xl text-[#002045] mb-1">Aggregate Calculator</h2>
+        <p class="text-sm text-[#74777f] mb-5">Choose manual entry or pick a university for preset formulas.</p>
+
+        <!-- Mode toggle -->
+        <div class="flex gap-2 bg-[#f3f4f5] rounded-xl p-1 mb-5">
+          <button type="button" id="mode-manual"
+            class="mode-btn flex-1 py-2 rounded-lg font-display font-semibold text-sm transition-all bg-[#002045] text-white shadow">Manual</button>
+          <button type="button" id="mode-university"
+            class="mode-btn flex-1 py-2 rounded-lg font-display font-semibold text-sm transition-all text-[#43474e]">By
+            University</button>
         </div>
-        <select id="university-select" style="display:none;"></select>
-        <div id="program-controls" style="display:none;" class="flex items-center gap-3 mt-3">
-          <label for="program-select" class="font-display font-semibold text-sm text-[#002045] whitespace-nowrap">Program:</label>
-          <select id="program-select" class="flex-1 px-3 py-2 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045]"></select>
+
+        <!-- Manual controls -->
+        <div id="manual-controls" class="flex items-center gap-3 mb-4">
+          <label for="mark-sources"
+            class="font-display font-semibold text-sm text-[#002045] whitespace-nowrap">Sources:</label>
+          <select id="mark-sources"
+            class="flex-1 px-3 py-2 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <!-- University controls -->
+        <div id="university-controls" style="display:none;" class="mb-4">
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#74777f] text-[18px]">search</span>
+            <input type="text" id="university-search" placeholder="Search university…" autocomplete="off"
+              class="w-full pl-9 pr-3 py-2.5 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10" />
+            <div id="uni-dropdown" class="uni-dropdown"></div>
+          </div>
+          <select id="university-select" style="display:none;"></select>
+          <div id="program-controls" style="display:none;" class="flex items-center gap-3 mt-3">
+            <label for="program-select"
+              class="font-display font-semibold text-sm text-[#002045] whitespace-nowrap">Program:</label>
+            <select id="program-select"
+              class="flex-1 px-3 py-2 bg-[#f3f4f5] border border-[#c4c6cf] rounded-lg font-body text-sm focus:outline-none focus:border-[#002045]"></select>
+          </div>
+        </div>
+
+        <!-- Formula display (university mode) -->
+        <div id="formula-display" style="display:none;"
+          class="mb-4 bg-[#f0f4f9] rounded-xl p-4 border border-[#d6e3ff]">
+          <div class="font-display font-semibold text-xs text-[#002045] uppercase tracking-wide mb-2">Weightage Formula
+          </div>
+          <div id="formula-list" class="space-y-1"></div>
+        </div>
+
+        <!-- Dynamic inputs -->
+        <div id="dynamic-inputs" class="space-y-3 mb-4"></div>
+
+        <!-- Buttons -->
+        <div class="flex gap-2">
+          <button type="button" id="calculate-btn"
+            class="flex-[2] bg-[#002045] text-white font-display font-bold py-3 rounded-xl hover:bg-[#1a365d] transition-colors active:scale-[0.98] shadow-md">Calculate</button>
+          <button type="button" id="reset-btn"
+            class="flex-1 bg-[#e7e8e9] text-[#43474e] font-display font-semibold py-3 rounded-xl hover:bg-[#d9dadb] transition-colors">Reset</button>
+        </div>
+
+        <!-- Result -->
+        <div id="result-display" class="mt-4"></div>
+
+        <!-- History -->
+        <div id="history-section" style="display:none;" class="mt-4 pt-4 border-t border-[#e1e3e4]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-display font-semibold text-xs text-[#74777f] uppercase tracking-wide">Recent
+              Calculations</span>
+            <button id="clear-history-btn"
+              class="text-xs text-[#74777f] border border-[#c4c6cf] rounded px-2 py-0.5 hover:text-[#ba1a1a] hover:border-[#ba1a1a] transition-colors">Clear</button>
+          </div>
+          <div id="history-list" class="space-y-2"></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Formula display (university mode) -->
-      <div id="formula-display" style="display:none;" class="mb-4 bg-[#f0f4f9] rounded-xl p-4 border border-[#d6e3ff]">
-        <div class="font-display font-semibold text-xs text-[#002045] uppercase tracking-wide mb-2">Weightage Formula</div>
-        <div id="formula-list" class="space-y-1"></div>
+  <!-- FOOTER -->
+  <footer class="border-t border-[#e1e3e4] bg-[#f8f9fa]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-display font-bold text-[#002045] mb-1">Acadrez</div>
+        <p class="text-xs text-[#74777f]">© 2025 Acadrez. Empowering Pakistani students.</p>
       </div>
-
-      <!-- Dynamic inputs -->
-      <div id="dynamic-inputs" class="space-y-3 mb-4"></div>
-
-      <!-- Buttons -->
-      <div class="flex gap-2">
-        <button type="button" id="calculate-btn" class="flex-[2] bg-[#002045] text-white font-display font-bold py-3 rounded-xl hover:bg-[#1a365d] transition-colors active:scale-[0.98] shadow-md">Calculate</button>
-        <button type="button" id="reset-btn" class="flex-1 bg-[#e7e8e9] text-[#43474e] font-display font-semibold py-3 rounded-xl hover:bg-[#d9dadb] transition-colors">Reset</button>
-      </div>
-
-      <!-- Result -->
-      <div id="result-display" class="mt-4"></div>
-
-      <!-- History -->
-      <div id="history-section" style="display:none;" class="mt-4 pt-4 border-t border-[#e1e3e4]">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-display font-semibold text-xs text-[#74777f] uppercase tracking-wide">Recent Calculations</span>
-          <button id="clear-history-btn" class="text-xs text-[#74777f] border border-[#c4c6cf] rounded px-2 py-0.5 hover:text-[#ba1a1a] hover:border-[#ba1a1a] transition-colors">Clear</button>
-        </div>
-        <div id="history-list" class="space-y-2"></div>
+      <div class="flex gap-6 text-xs text-[#74777f] font-medium items-center">
+        <a href="universities.html" class="hover:text-[#002045] transition-colors">Universities</a>
+        <a href="how-it-works.html" class="hover:text-[#002045] transition-colors">How it Works</a>
+        <a href="about.html" class="hover:text-[#002045] transition-colors">About</a>
+        <button onclick="shareAcadify(this)"
+          class="hover:text-[#002045] transition-colors flex items-center gap-1"><span
+            class="material-symbols-outlined text-[14px]">share</span>Share</button>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- FOOTER -->
-<footer class="border-t border-[#e1e3e4] bg-[#f8f9fa]">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <div>
-      <div class="font-display font-bold text-[#002045] mb-1">Acadrez</div>
-      <p class="text-xs text-[#74777f]">© 2025 Acadrez. Empowering Pakistani students.</p>
-    </div>
-    <div class="flex gap-6 text-xs text-[#74777f] font-medium items-center">
-      <a href="universities.html" class="hover:text-[#002045] transition-colors">Universities</a>
-      <a href="how-it-works.html" class="hover:text-[#002045] transition-colors">How it Works</a>
-      <a href="about.html" class="hover:text-[#002045] transition-colors">About</a>
-      <button onclick="shareAcadify(this)" class="hover:text-[#002045] transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">share</span>Share</button>
-    </div>
-  </div>
-</footer>
-
-<script>
-function shareAcadify(btn) {
-  const url = 'https://acadify.pages.dev/';
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  if (isMobile && navigator.share) {
-    navigator.share({ title: 'Acadrez — Free Aggregate Calculator', text: 'Calculate your university aggregate instantly — free, no login. NUST, FAST, UET, COMSATS and 15+ Pakistani universities.', url }).catch(() => {});
-  } else {
-    navigator.clipboard.writeText(url).then(() => {
-      const orig = btn.innerHTML;
-      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>Copied!';
-      setTimeout(() => { btn.innerHTML = orig; }, 2000);
-    }).catch(() => { prompt('Copy this link:', url); });
-  }
-}
-</script>
-<script src="Universities.js"></script>
-<script>
-// ── Shared calculator logic (embedded) ───────────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
-  const markSourcesSelect      = document.getElementById('mark-sources');
-  const universitySelect       = document.getElementById('university-select');
-  const uniSearchInput         = document.getElementById('university-search');
-  const uniDropdown            = document.getElementById('uni-dropdown');
-  const programControls        = document.getElementById('program-controls');
-  const programSelect          = document.getElementById('program-select');
-  const dynamicInputsContainer = document.getElementById('dynamic-inputs');
-  const manualControls         = document.getElementById('manual-controls');
-  const universityControls     = document.getElementById('university-controls');
-  const formulaDisplay         = document.getElementById('formula-display');
-  const formulaList            = document.getElementById('formula-list');
-  const modeBtns               = document.querySelectorAll('.mode-btn');
-
-  let currentMode = 'manual';
-  let undoSnapshot = null;
-  const MAX_HISTORY = 5;
-  let calcHistory = [];
-
-  universities.forEach(function(uni) {
-    const option = document.createElement('option');
-    option.value = uni.id;
-    option.textContent = uni.name;
-    universitySelect.appendChild(option);
-  });
-
-  function levenshtein(a, b) {
-    const m=a.length,n=b.length,dp=Array.from({length:m+1},(_,i)=>[i]);
-    for(let j=1;j<=n;j++) dp[0][j]=j;
-    for(let i=1;i<=m;i++) for(let j=1;j<=n;j++) dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]:1+Math.min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]);
-    return dp[m][n];
-  }
-
-  function matchScore(name, query) {
-    const n=name.toLowerCase(),q=query.toLowerCase().trim();
-    if(!q) return null;
-    if(n.includes(q)) return 0;
-    const qWords=q.split(/\s+/);
-    if(qWords.every(w=>n.includes(w))) return 1;
-    const nWords=n.split(/\s+/);
-    let totalDist=0,matched=0;
-    for(const qw of qWords){const best=Math.min(...nWords.map(nw=>levenshtein(qw,nw)));const tol=qw.length<=4?1:2;if(best<=tol){totalDist+=best;matched++;}}
-    if(matched===qWords.length) return 2+totalDist;
-    if(matched>0) return 4+totalDist;
-    return null;
-  }
-
-  function renderDropdown(query) {
-    uniDropdown.innerHTML='';
-    let list;
-    if(!query.trim()) {
-      list=[...universities].sort((a,b)=>a.name.localeCompare(b.name));
-    } else {
-      const results=universities.map(u=>({uni:u,score:matchScore(u.name,query)})).filter(r=>r.score!==null).sort((a,b)=>a.score-b.score).slice(0,8);
-      if(results.length===0){const e=document.createElement('div');e.className='uni-option uni-no-results';e.textContent='No universities found';uniDropdown.appendChild(e);uniDropdown.style.display='block';return;}
-      list=results.map(r=>r.uni);
-    }
-    list.forEach(function(uni){const item=document.createElement('div');item.className='uni-option';item.textContent=uni.name;item.addEventListener('mousedown',function(e){e.preventDefault();selectUniversity(uni);});uniDropdown.appendChild(item);});
-    uniDropdown.style.display='block';
-  }
-
-  function selectUniversity(uni) {
-    uniSearchInput.value=uni.name;
-    universitySelect.value=uni.id;
-    uniDropdown.style.display='none';
-    clearMessages();
-    undoSnapshot=null;
-    updateResetBtn(false);
-    loadProgramControls(uni);
-  }
-
-  function showFormula(sources, sourceUrl) {
-    formulaList.innerHTML='';
-    sources.forEach(s=>{
-      const row=document.createElement('div');
-      row.className='flex justify-between items-center py-1 border-b border-[#d6e3ff] last:border-0';
-      row.innerHTML=`<span class="text-sm text-[#43474e]">${s.label}</span><span class="font-display font-bold text-sm text-[#002045]">${s.weightage}%</span>`;
-      formulaList.appendChild(row);
-    });
-    if(sourceUrl){
-      const link=document.createElement('a');
-      link.href=sourceUrl;
-      link.target='_blank';
-      link.rel='noopener noreferrer';
-      link.className='flex items-center gap-1 mt-3 text-xs font-display font-semibold text-[#002045] hover:underline';
-      link.innerHTML=`<span class="material-symbols-outlined text-[14px]">open_in_new</span>Formula Source`;
-      formulaList.appendChild(link);
-    }
-    formulaDisplay.style.display='block';
-  }
-
-  function loadProgramControls(uni) {
-    programSelect.innerHTML='';
-    if(uni.programs.length>1){
-      uni.programs.forEach(function(prog,idx){const opt=document.createElement('option');opt.value=idx;opt.textContent=prog.label;programSelect.appendChild(opt);});
-      programControls.style.display='flex';
-    } else {
-      programControls.style.display='none';
-    }
-    loadUniversityForm(uni.id,0);
-    showFormula(uni.programs[0].sources, uni.sourceUrl);
-  }
-
-  programSelect.addEventListener('change',function(){
-    const uni=universities.find(u=>u.id===universitySelect.value);
-    if(!uni) return;
-    clearMessages();undoSnapshot=null;updateResetBtn(false);
-    loadUniversityForm(uni.id,parseInt(this.value,10));
-    showFormula(uni.programs[parseInt(this.value,10)].sources, uni.sourceUrl);
-  });
-
-  uniSearchInput.addEventListener('input',function(){universitySelect.value='';programControls.style.display='none';dynamicInputsContainer.innerHTML='';formulaDisplay.style.display='none';clearMessages();renderDropdown(this.value);});
-  uniSearchInput.addEventListener('focus',function(){renderDropdown(this.value);});
-  uniSearchInput.addEventListener('blur',function(){setTimeout(function(){uniDropdown.style.display='none';},150);});
-
-  modeBtns.forEach(function(btn){
-    btn.addEventListener('click',function(){
-      modeBtns.forEach(b=>{b.classList.remove('bg-[#002045]','text-white','shadow');b.classList.add('text-[#43474e]');});
-      btn.classList.add('bg-[#002045]','text-white','shadow');btn.classList.remove('text-[#43474e]');
-      if(btn.id==='mode-manual'){
-        currentMode='manual';manualControls.style.display='flex';universityControls.style.display='none';formulaDisplay.style.display='none';
-        const count=parseInt(markSourcesSelect.value,10);generateInputFields(count);
+  <script>
+    function shareAcadify(btn) {
+      const url = 'https://acadrez.pages.dev/';
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile && navigator.share) {
+        navigator.share({ title: 'Acadrez — Free Aggregate Calculator', text: 'Calculate your university aggregate instantly — free, no login. NUST, FAST, UET, COMSATS and 15+ Pakistani universities.', url }).catch(() => { });
       } else {
-        currentMode='university';manualControls.style.display='none';universityControls.style.display='block';dynamicInputsContainer.innerHTML='';
-        universitySelect.value='';uniSearchInput.value='';programControls.style.display='none';formulaDisplay.style.display='none';
+        navigator.clipboard.writeText(url).then(() => {
+          const orig = btn.innerHTML;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>Copied!';
+          setTimeout(() => { btn.innerHTML = orig; }, 2000);
+        }).catch(() => { prompt('Copy this link:', url); });
       }
-      clearMessages();undoSnapshot=null;updateResetBtn(false);
-    });
-  });
+    }
+  </script>
+  <script src="Universities.js"></script>
+  <script>
+    // ── Shared calculator logic (embedded) ───────────────────────────────
+    document.addEventListener('DOMContentLoaded', function () {
+      const markSourcesSelect = document.getElementById('mark-sources');
+      const universitySelect = document.getElementById('university-select');
+      const uniSearchInput = document.getElementById('university-search');
+      const uniDropdown = document.getElementById('uni-dropdown');
+      const programControls = document.getElementById('program-controls');
+      const programSelect = document.getElementById('program-select');
+      const dynamicInputsContainer = document.getElementById('dynamic-inputs');
+      const manualControls = document.getElementById('manual-controls');
+      const universityControls = document.getElementById('university-controls');
+      const formulaDisplay = document.getElementById('formula-display');
+      const formulaList = document.getElementById('formula-list');
+      const modeBtns = document.querySelectorAll('.mode-btn');
 
-  markSourcesSelect.addEventListener('change',function(){const saved=snapshotValues();generateInputFields(parseInt(this.value,10),saved);});
+      let currentMode = 'manual';
+      let undoSnapshot = null;
+      const MAX_HISTORY = 5;
+      let calcHistory = [];
 
-  function loadUniversityForm(universityId,programIndex){
-    const uni=universities.find(u=>u.id===universityId);if(!uni)return;
-    const program=uni.programs[programIndex]||uni.programs[0];if(!program)return;
-    dynamicInputsContainer.innerHTML='';
-    program.sources.forEach(function(source,index){dynamicInputsContainer.appendChild(createUniversitySourceCard(index+1,source.label,source.weightage,source.allowAdditional));});
-  }
+      universities.forEach(function (uni) {
+        const option = document.createElement('option');
+        option.value = uni.id;
+        option.textContent = uni.name;
+        universitySelect.appendChild(option);
+      });
 
-  function createUniversitySourceCard(num,label,weightage,allowAdditional){
-    const section=document.createElement('div');
-    section.className='bg-[#f3f4f5] border border-[#e1e3e4] rounded-xl p-4';
-    section.setAttribute('data-source-number',num);
-    section.innerHTML=`
+      function levenshtein(a, b) {
+        const m = a.length, n = b.length, dp = Array.from({ length: m + 1 }, (_, i) => [i]);
+        for (let j = 1; j <= n; j++) dp[0][j] = j;
+        for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+        return dp[m][n];
+      }
+
+      function matchScore(name, query) {
+        const n = name.toLowerCase(), q = query.toLowerCase().trim();
+        if (!q) return null;
+        if (n.includes(q)) return 0;
+        const qWords = q.split(/\s+/);
+        if (qWords.every(w => n.includes(w))) return 1;
+        const nWords = n.split(/\s+/);
+        let totalDist = 0, matched = 0;
+        for (const qw of qWords) { const best = Math.min(...nWords.map(nw => levenshtein(qw, nw))); const tol = qw.length <= 4 ? 1 : 2; if (best <= tol) { totalDist += best; matched++; } }
+        if (matched === qWords.length) return 2 + totalDist;
+        if (matched > 0) return 4 + totalDist;
+        return null;
+      }
+
+      function renderDropdown(query) {
+        uniDropdown.innerHTML = '';
+        let list;
+        if (!query.trim()) {
+          list = [...universities].sort((a, b) => a.name.localeCompare(b.name));
+        } else {
+          const results = universities.map(u => ({ uni: u, score: matchScore(u.name, query) })).filter(r => r.score !== null).sort((a, b) => a.score - b.score).slice(0, 8);
+          if (results.length === 0) { const e = document.createElement('div'); e.className = 'uni-option uni-no-results'; e.textContent = 'No universities found'; uniDropdown.appendChild(e); uniDropdown.style.display = 'block'; return; }
+          list = results.map(r => r.uni);
+        }
+        list.forEach(function (uni) { const item = document.createElement('div'); item.className = 'uni-option'; item.textContent = uni.name; item.addEventListener('mousedown', function (e) { e.preventDefault(); selectUniversity(uni); }); uniDropdown.appendChild(item); });
+        uniDropdown.style.display = 'block';
+      }
+
+      function selectUniversity(uni) {
+        uniSearchInput.value = uni.name;
+        universitySelect.value = uni.id;
+        uniDropdown.style.display = 'none';
+        clearMessages();
+        undoSnapshot = null;
+        updateResetBtn(false);
+        loadProgramControls(uni);
+      }
+
+      function showFormula(sources, sourceUrl) {
+        formulaList.innerHTML = '';
+        sources.forEach(s => {
+          const row = document.createElement('div');
+          row.className = 'flex justify-between items-center py-1 border-b border-[#d6e3ff] last:border-0';
+          row.innerHTML = `<span class="text-sm text-[#43474e]">${s.label}</span><span class="font-display font-bold text-sm text-[#002045]">${s.weightage}%</span>`;
+          formulaList.appendChild(row);
+        });
+        if (sourceUrl) {
+          const link = document.createElement('a');
+          link.href = sourceUrl;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.className = 'flex items-center gap-1 mt-3 text-xs font-display font-semibold text-[#002045] hover:underline';
+          link.innerHTML = `<span class="material-symbols-outlined text-[14px]">open_in_new</span>Formula Source`;
+          formulaList.appendChild(link);
+        }
+        formulaDisplay.style.display = 'block';
+      }
+
+      function loadProgramControls(uni) {
+        programSelect.innerHTML = '';
+        if (uni.programs.length > 1) {
+          uni.programs.forEach(function (prog, idx) { const opt = document.createElement('option'); opt.value = idx; opt.textContent = prog.label; programSelect.appendChild(opt); });
+          programControls.style.display = 'flex';
+        } else {
+          programControls.style.display = 'none';
+        }
+        loadUniversityForm(uni.id, 0);
+        showFormula(uni.programs[0].sources, uni.sourceUrl);
+      }
+
+      programSelect.addEventListener('change', function () {
+        const uni = universities.find(u => u.id === universitySelect.value);
+        if (!uni) return;
+        clearMessages(); undoSnapshot = null; updateResetBtn(false);
+        loadUniversityForm(uni.id, parseInt(this.value, 10));
+        showFormula(uni.programs[parseInt(this.value, 10)].sources, uni.sourceUrl);
+      });
+
+      uniSearchInput.addEventListener('input', function () { universitySelect.value = ''; programControls.style.display = 'none'; dynamicInputsContainer.innerHTML = ''; formulaDisplay.style.display = 'none'; clearMessages(); renderDropdown(this.value); });
+      uniSearchInput.addEventListener('focus', function () { renderDropdown(this.value); });
+      uniSearchInput.addEventListener('blur', function () { setTimeout(function () { uniDropdown.style.display = 'none'; }, 150); });
+
+      modeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          modeBtns.forEach(b => { b.classList.remove('bg-[#002045]', 'text-white', 'shadow'); b.classList.add('text-[#43474e]'); });
+          btn.classList.add('bg-[#002045]', 'text-white', 'shadow'); btn.classList.remove('text-[#43474e]');
+          if (btn.id === 'mode-manual') {
+            currentMode = 'manual'; manualControls.style.display = 'flex'; universityControls.style.display = 'none'; formulaDisplay.style.display = 'none';
+            const count = parseInt(markSourcesSelect.value, 10); generateInputFields(count);
+          } else {
+            currentMode = 'university'; manualControls.style.display = 'none'; universityControls.style.display = 'block'; dynamicInputsContainer.innerHTML = '';
+            universitySelect.value = ''; uniSearchInput.value = ''; programControls.style.display = 'none'; formulaDisplay.style.display = 'none';
+          }
+          clearMessages(); undoSnapshot = null; updateResetBtn(false);
+        });
+      });
+
+      markSourcesSelect.addEventListener('change', function () { const saved = snapshotValues(); generateInputFields(parseInt(this.value, 10), saved); });
+
+      function loadUniversityForm(universityId, programIndex) {
+        const uni = universities.find(u => u.id === universityId); if (!uni) return;
+        const program = uni.programs[programIndex] || uni.programs[0]; if (!program) return;
+        dynamicInputsContainer.innerHTML = '';
+        program.sources.forEach(function (source, index) { dynamicInputsContainer.appendChild(createUniversitySourceCard(index + 1, source.label, source.weightage, source.allowAdditional)); });
+      }
+
+      function createUniversitySourceCard(num, label, weightage, allowAdditional) {
+        const section = document.createElement('div');
+        section.className = 'bg-[#f3f4f5] border border-[#e1e3e4] rounded-xl p-4';
+        section.setAttribute('data-source-number', num);
+        section.innerHTML = `
       <div class="flex items-center justify-between mb-3">
         <span class="font-display font-semibold text-sm text-[#002045]">${label}</span>
         <span class="bg-[#d6e3ff] text-[#002045] font-display font-bold text-xs px-2 py-0.5 rounded-full">${weightage}%</span>
@@ -437,47 +551,47 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <input type="hidden" id="source-${num}-weightage" value="${weightage}"/>
-      ${allowAdditional?`<div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-[#c4c6cf]">
+      ${allowAdditional ? `<div class="flex items-center gap-2 mt-3 pt-3 border-t border-dashed border-[#c4c6cf]">
         <label class="text-xs font-semibold text-[#43474e] uppercase tracking-wide whitespace-nowrap">Additional</label>
         <input type="number" id="source-${num}-additional" placeholder="0" min="0" step="1"
           class="flex-1 px-3 py-2 bg-white border border-dashed border-[#c4c6cf] rounded-lg text-sm focus:outline-none focus:border-[#002045]"/>
-      </div>`:''}
+      </div>`: ''}
     `;
-    return section;
-  }
+        return section;
+      }
 
-  function getSourceCount(){
-    if(currentMode==='university'&&universitySelect.value){
-      const uni=universities.find(u=>u.id===universitySelect.value);if(!uni)return 0;
-      const progIdx=uni.programs.length>1?parseInt(programSelect.value,10):0;
-      const program=uni.programs[progIdx]||uni.programs[0];return program?program.sources.length:0;
-    }
-    return parseInt(markSourcesSelect.value,10);
-  }
+      function getSourceCount() {
+        if (currentMode === 'university' && universitySelect.value) {
+          const uni = universities.find(u => u.id === universitySelect.value); if (!uni) return 0;
+          const progIdx = uni.programs.length > 1 ? parseInt(programSelect.value, 10) : 0;
+          const program = uni.programs[progIdx] || uni.programs[0]; return program ? program.sources.length : 0;
+        }
+        return parseInt(markSourcesSelect.value, 10);
+      }
 
-  function getCurrentSources(){
-    if(currentMode!=='university'||!universitySelect.value)return null;
-    const uni=universities.find(u=>u.id===universitySelect.value);if(!uni)return null;
-    const progIdx=uni.programs.length>1?parseInt(programSelect.value,10):0;
-    const program=uni.programs[progIdx]||uni.programs[0];return program?program.sources:null;
-  }
+      function getCurrentSources() {
+        if (currentMode !== 'university' || !universitySelect.value) return null;
+        const uni = universities.find(u => u.id === universitySelect.value); if (!uni) return null;
+        const progIdx = uni.programs.length > 1 ? parseInt(programSelect.value, 10) : 0;
+        const program = uni.programs[progIdx] || uni.programs[0]; return program ? program.sources : null;
+      }
 
-  function generateInputFields(count,preserveValues){
-    dynamicInputsContainer.innerHTML='';
-    for(let i=1;i<=count;i++){const saved=preserveValues&&preserveValues[i]?preserveValues[i]:{};dynamicInputsContainer.appendChild(createSourceSection(i,saved));}
-  }
+      function generateInputFields(count, preserveValues) {
+        dynamicInputsContainer.innerHTML = '';
+        for (let i = 1; i <= count; i++) { const saved = preserveValues && preserveValues[i] ? preserveValues[i] : {}; dynamicInputsContainer.appendChild(createSourceSection(i, saved)); }
+      }
 
-  function snapshotValues(){
-    const count=getSourceCount(),saved={};
-    for(let i=1;i<=count;i++){saved[i]={name:(document.getElementById(`source-${i}-name`)||{}).value||'',total:(document.getElementById(`source-${i}-total`)||{}).value||'',obtained:(document.getElementById(`source-${i}-obtained`)||{}).value||'',weightage:(document.getElementById(`source-${i}-weightage`)||{}).value||'',additional:(document.getElementById(`source-${i}-additional`)||{}).value||''};}
-    return saved;
-  }
+      function snapshotValues() {
+        const count = getSourceCount(), saved = {};
+        for (let i = 1; i <= count; i++) { saved[i] = { name: (document.getElementById(`source-${i}-name`) || {}).value || '', total: (document.getElementById(`source-${i}-total`) || {}).value || '', obtained: (document.getElementById(`source-${i}-obtained`) || {}).value || '', weightage: (document.getElementById(`source-${i}-weightage`) || {}).value || '', additional: (document.getElementById(`source-${i}-additional`) || {}).value || '' }; }
+        return saved;
+      }
 
-  function createSourceSection(num,saved={}){
-    const section=document.createElement('div');
-    section.className='bg-[#f3f4f5] border border-[#e1e3e4] rounded-xl p-4';
-    section.setAttribute('data-source-number',num);
-    section.innerHTML=`
+      function createSourceSection(num, saved = {}) {
+        const section = document.createElement('div');
+        section.className = 'bg-[#f3f4f5] border border-[#e1e3e4] rounded-xl p-4';
+        section.setAttribute('data-source-number', num);
+        section.innerHTML = `
       <div class="flex items-center gap-2 mb-3">
         <span class="bg-[#002045] text-white font-display font-bold text-xs px-2 py-0.5 rounded-full uppercase tracking-wide">Source ${num}</span>
         <input type="text" id="source-${num}-name" placeholder="Optional (e.g. Matric, FSc, Test)"
@@ -486,144 +600,144 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="grid grid-cols-2 gap-3 mb-3">
         <div>
           <label class="block text-xs font-semibold text-[#43474e] uppercase tracking-wide mb-1">Total Marks</label>
-          <input type="number" id="source-${num}-total" placeholder="100" min="0" step="1" value="${saved.total||''}"
+          <input type="number" id="source-${num}-total" placeholder="100" min="0" step="1" value="${saved.total || ''}"
             class="w-full px-3 py-2 bg-white border border-[#c4c6cf] rounded-lg text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10"/>
         </div>
         <div>
           <label class="block text-xs font-semibold text-[#43474e] uppercase tracking-wide mb-1">Obtained</label>
-          <input type="number" id="source-${num}-obtained" placeholder="0" min="0" step="1" value="${saved.obtained||''}"
+          <input type="number" id="source-${num}-obtained" placeholder="0" min="0" step="1" value="${saved.obtained || ''}"
             class="w-full px-3 py-2 bg-white border border-[#c4c6cf] rounded-lg text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10"/>
         </div>
       </div>
       <div>
         <label class="block text-xs font-semibold text-[#43474e] uppercase tracking-wide mb-1">Weightage (%)</label>
-        <input type="number" id="source-${num}-weightage" placeholder="0" min="0" max="100" step="1" value="${saved.weightage||''}"
+        <input type="number" id="source-${num}-weightage" placeholder="0" min="0" max="100" step="1" value="${saved.weightage || ''}"
           class="w-full px-3 py-2 bg-white border border-[#c4c6cf] rounded-lg text-sm focus:outline-none focus:border-[#002045] focus:ring-2 focus:ring-[#002045]/10"/>
       </div>
     `;
-    return section;
-  }
+        return section;
+      }
 
-  generateInputFields(2);
+      generateInputFields(2);
 
-  const calculateBtn=document.getElementById('calculate-btn');
-  const resultDisplay=document.getElementById('result-display');
-  const resetBtn=document.getElementById('reset-btn');
+      const calculateBtn = document.getElementById('calculate-btn');
+      const resultDisplay = document.getElementById('result-display');
+      const resetBtn = document.getElementById('reset-btn');
 
-  calculateBtn.addEventListener('click',function(){
-    if(validateForm()){const aggregate=calculateAggregate();saveToHistory(aggregate);displayResult(aggregate);renderHistory();}
-  });
+      calculateBtn.addEventListener('click', function () {
+        if (validateForm()) { const aggregate = calculateAggregate(); saveToHistory(aggregate); displayResult(aggregate); renderHistory(); }
+      });
 
-  function updateResetBtn(isUndo){resetBtn.textContent=isUndo?'Undo':'Reset';}
+      function updateResetBtn(isUndo) { resetBtn.textContent = isUndo ? 'Undo' : 'Reset'; }
 
-  resetBtn.addEventListener('click',function(){
-    if(resetBtn.textContent==='Undo'){
-      if(!undoSnapshot)return;
-      if(currentMode==='manual'){markSourcesSelect.value=undoSnapshot.sourceCount;generateInputFields(undoSnapshot.sourceCount,undoSnapshot.values);}
-      else{const count=getSourceCount();for(let i=1;i<=count;i++){const vals=undoSnapshot.values[i]||{};const t=document.getElementById(`source-${i}-total`);const o=document.getElementById(`source-${i}-obtained`);const a=document.getElementById(`source-${i}-additional`);if(t&&vals.total)t.value=vals.total;if(o&&vals.obtained)o.value=vals.obtained;if(a&&vals.additional)a.value=vals.additional;}}
-      undoSnapshot=null;updateResetBtn(false);clearMessages();
-    } else {
-      undoSnapshot={sourceCount:getSourceCount(),values:snapshotValues()};updateResetBtn(true);
-      if(currentMode==='manual'){generateInputFields(getSourceCount());}
-      else{const count=getSourceCount();for(let i=1;i<=count;i++){const t=document.getElementById(`source-${i}-total`);const o=document.getElementById(`source-${i}-obtained`);const a=document.getElementById(`source-${i}-additional`);if(t)t.value='';if(o)o.value='';if(a)a.value='';}}
-      clearMessages();
-    }
-  });
+      resetBtn.addEventListener('click', function () {
+        if (resetBtn.textContent === 'Undo') {
+          if (!undoSnapshot) return;
+          if (currentMode === 'manual') { markSourcesSelect.value = undoSnapshot.sourceCount; generateInputFields(undoSnapshot.sourceCount, undoSnapshot.values); }
+          else { const count = getSourceCount(); for (let i = 1; i <= count; i++) { const vals = undoSnapshot.values[i] || {}; const t = document.getElementById(`source-${i}-total`); const o = document.getElementById(`source-${i}-obtained`); const a = document.getElementById(`source-${i}-additional`); if (t && vals.total) t.value = vals.total; if (o && vals.obtained) o.value = vals.obtained; if (a && vals.additional) a.value = vals.additional; } }
+          undoSnapshot = null; updateResetBtn(false); clearMessages();
+        } else {
+          undoSnapshot = { sourceCount: getSourceCount(), values: snapshotValues() }; updateResetBtn(true);
+          if (currentMode === 'manual') { generateInputFields(getSourceCount()); }
+          else { const count = getSourceCount(); for (let i = 1; i <= count; i++) { const t = document.getElementById(`source-${i}-total`); const o = document.getElementById(`source-${i}-obtained`); const a = document.getElementById(`source-${i}-additional`); if (t) t.value = ''; if (o) o.value = ''; if (a) a.value = ''; } }
+          clearMessages();
+        }
+      });
 
-  function saveToHistory(aggregate){
-    const count=getSourceCount();const sources=[];
-    for(let i=1;i<=count;i++){const nameEl=document.getElementById(`source-${i}-name`);const addEl=document.getElementById(`source-${i}-additional`);sources.push({name:nameEl?(nameEl.value||`Source ${i}`):`Source ${i}`,total:document.getElementById(`source-${i}-total`).value,obtained:document.getElementById(`source-${i}-obtained`).value,weightage:document.getElementById(`source-${i}-weightage`).value,additional:addEl?(addEl.value||'0'):'0'});}
-    const label=currentMode==='university'&&universitySelect.value?universities.find(u=>u.id===universitySelect.value)?.name:null;
-    calcHistory.unshift({aggregate,sources,time:new Date(),universityLabel:label});
-    if(calcHistory.length>MAX_HISTORY)calcHistory.pop();
-  }
+      function saveToHistory(aggregate) {
+        const count = getSourceCount(); const sources = [];
+        for (let i = 1; i <= count; i++) { const nameEl = document.getElementById(`source-${i}-name`); const addEl = document.getElementById(`source-${i}-additional`); sources.push({ name: nameEl ? (nameEl.value || `Source ${i}`) : `Source ${i}`, total: document.getElementById(`source-${i}-total`).value, obtained: document.getElementById(`source-${i}-obtained`).value, weightage: document.getElementById(`source-${i}-weightage`).value, additional: addEl ? (addEl.value || '0') : '0' }); }
+        const label = currentMode === 'university' && universitySelect.value ? universities.find(u => u.id === universitySelect.value)?.name : null;
+        calcHistory.unshift({ aggregate, sources, time: new Date(), universityLabel: label });
+        if (calcHistory.length > MAX_HISTORY) calcHistory.pop();
+      }
 
-  function renderHistory(){
-    const section=document.getElementById('history-section');const list=document.getElementById('history-list');
-    if(calcHistory.length===0){section.style.display='none';return;}
-    section.style.display='block';list.innerHTML='';
-    calcHistory.forEach(function(entry){
-      const item=document.createElement('div');
-      item.className='flex items-center gap-2 bg-[#f3f4f5] border border-[#e1e3e4] rounded-lg px-3 py-2 text-xs';
-      const badge=document.createElement('span');
-      badge.className='font-display font-bold text-sm min-w-[52px] '+(entry.aggregate>=75?'text-[#1a7a4a]':entry.aggregate>=50?'text-[#b35a00]':'text-[#ba1a1a]');
-      badge.textContent=`${entry.aggregate}%`;
-      const summary=document.createElement('span');summary.className='text-[#74777f] truncate flex-1';
-      summary.textContent=(entry.universityLabel?entry.universityLabel+': ':'')+entry.sources.map(s=>`${s.name} (${s.obtained}/${s.total})`).join(' · ');
-      const restoreBtn=document.createElement('button');restoreBtn.textContent='↩';restoreBtn.className='text-[#74777f] hover:text-[#002045] flex-shrink-0';
-      restoreBtn.addEventListener('click',function(){restoreFromHistory(entry);});
-      item.appendChild(restoreBtn);item.appendChild(badge);item.appendChild(summary);list.appendChild(item);
-    });
-  }
+      function renderHistory() {
+        const section = document.getElementById('history-section'); const list = document.getElementById('history-list');
+        if (calcHistory.length === 0) { section.style.display = 'none'; return; }
+        section.style.display = 'block'; list.innerHTML = '';
+        calcHistory.forEach(function (entry) {
+          const item = document.createElement('div');
+          item.className = 'flex items-center gap-2 bg-[#f3f4f5] border border-[#e1e3e4] rounded-lg px-3 py-2 text-xs';
+          const badge = document.createElement('span');
+          badge.className = 'font-display font-bold text-sm min-w-[52px] ' + (entry.aggregate >= 75 ? 'text-[#1a7a4a]' : entry.aggregate >= 50 ? 'text-[#b35a00]' : 'text-[#ba1a1a]');
+          badge.textContent = `${entry.aggregate}%`;
+          const summary = document.createElement('span'); summary.className = 'text-[#74777f] truncate flex-1';
+          summary.textContent = (entry.universityLabel ? entry.universityLabel + ': ' : '') + entry.sources.map(s => `${s.name} (${s.obtained}/${s.total})`).join(' · ');
+          const restoreBtn = document.createElement('button'); restoreBtn.textContent = '↩'; restoreBtn.className = 'text-[#74777f] hover:text-[#002045] flex-shrink-0';
+          restoreBtn.addEventListener('click', function () { restoreFromHistory(entry); });
+          item.appendChild(restoreBtn); item.appendChild(badge); item.appendChild(summary); list.appendChild(item);
+        });
+      }
 
-  function restoreFromHistory(entry){
-    modeBtns.forEach(b=>{b.classList.remove('bg-[#002045]','text-white','shadow');b.classList.add('text-[#43474e]');});
-    document.getElementById('mode-manual').classList.add('bg-[#002045]','text-white','shadow');document.getElementById('mode-manual').classList.remove('text-[#43474e]');
-    currentMode='manual';manualControls.style.display='flex';universityControls.style.display='none';formulaDisplay.style.display='none';
-    const count=entry.sources.length;markSourcesSelect.value=count;
-    const values={};entry.sources.forEach((s,i)=>{values[i+1]={name:s.name===`Source ${i+1}`?'':s.name,total:s.total,obtained:s.obtained,weightage:s.weightage};});
-    generateInputFields(count,values);clearMessages();updateResetBtn(false);
-  }
+      function restoreFromHistory(entry) {
+        modeBtns.forEach(b => { b.classList.remove('bg-[#002045]', 'text-white', 'shadow'); b.classList.add('text-[#43474e]'); });
+        document.getElementById('mode-manual').classList.add('bg-[#002045]', 'text-white', 'shadow'); document.getElementById('mode-manual').classList.remove('text-[#43474e]');
+        currentMode = 'manual'; manualControls.style.display = 'flex'; universityControls.style.display = 'none'; formulaDisplay.style.display = 'none';
+        const count = entry.sources.length; markSourcesSelect.value = count;
+        const values = {}; entry.sources.forEach((s, i) => { values[i + 1] = { name: s.name === `Source ${i + 1}` ? '' : s.name, total: s.total, obtained: s.obtained, weightage: s.weightage }; });
+        generateInputFields(count, values); clearMessages(); updateResetBtn(false);
+      }
 
-  document.getElementById('clear-history-btn').addEventListener('click',function(){calcHistory=[];renderHistory();});
+      document.getElementById('clear-history-btn').addEventListener('click', function () { calcHistory = []; renderHistory(); });
 
-  function validateForm(){
-    clearMessages();
-    if(currentMode==='university'&&!universitySelect.value){displayErrors(['Please search and select a university first.']);return false;}
-    const errors=[];const count=getSourceCount();let totalW=0;
-    for(let i=1;i<=count;i++){
-      const t=document.getElementById(`source-${i}-total`);const o=document.getElementById(`source-${i}-obtained`);const w=document.getElementById(`source-${i}-weightage`);const a=document.getElementById(`source-${i}-additional`);
-      if(!t.value||t.value.trim()===''){errors.push(`Source ${i}: Total marks is required.`);t.classList.add('error-input');}
-      else if(parseFloat(t.value)<=0){errors.push(`Source ${i}: Total marks must be > 0.`);t.classList.add('error-input');}
-      if(!o.value||o.value.trim()===''){errors.push(`Source ${i}: Obtained marks is required.`);o.classList.add('error-input');}
-      if(currentMode==='manual'){if(!w||!w.value||w.value.trim()===''){errors.push(`Source ${i}: Weightage is required.`);if(w)w.classList.add('error-input');}}
-      if(t.value&&o.value){const total=parseFloat(t.value),obtained=parseFloat(o.value),add=a?parseFloat(a.value||0):0;if((obtained+add)>total){errors.push(`Source ${i}: Obtained+Additional cannot exceed Total.`);o.classList.add('error-input');t.classList.add('error-input');}}
-      if(w&&w.value)totalW+=parseFloat(w.value);
-    }
-    if(currentMode==='manual'&&totalW!==100){errors.push(`Total weightage is ${totalW.toFixed(2)}%. Must equal exactly 100%.`);for(let i=1;i<=count;i++){const w=document.getElementById(`source-${i}-weightage`);if(w)w.classList.add('error-input');}}
-    if(errors.length>0){displayErrors(errors);return false;}
-    document.querySelectorAll('.error-input').forEach(el=>el.classList.remove('error-input'));
-    return true;
-  }
+      function validateForm() {
+        clearMessages();
+        if (currentMode === 'university' && !universitySelect.value) { displayErrors(['Please search and select a university first.']); return false; }
+        const errors = []; const count = getSourceCount(); let totalW = 0;
+        for (let i = 1; i <= count; i++) {
+          const t = document.getElementById(`source-${i}-total`); const o = document.getElementById(`source-${i}-obtained`); const w = document.getElementById(`source-${i}-weightage`); const a = document.getElementById(`source-${i}-additional`);
+          if (!t.value || t.value.trim() === '') { errors.push(`Source ${i}: Total marks is required.`); t.classList.add('error-input'); }
+          else if (parseFloat(t.value) <= 0) { errors.push(`Source ${i}: Total marks must be > 0.`); t.classList.add('error-input'); }
+          if (!o.value || o.value.trim() === '') { errors.push(`Source ${i}: Obtained marks is required.`); o.classList.add('error-input'); }
+          if (currentMode === 'manual') { if (!w || !w.value || w.value.trim() === '') { errors.push(`Source ${i}: Weightage is required.`); if (w) w.classList.add('error-input'); } }
+          if (t.value && o.value) { const total = parseFloat(t.value), obtained = parseFloat(o.value), add = a ? parseFloat(a.value || 0) : 0; if ((obtained + add) > total) { errors.push(`Source ${i}: Obtained+Additional cannot exceed Total.`); o.classList.add('error-input'); t.classList.add('error-input'); } }
+          if (w && w.value) totalW += parseFloat(w.value);
+        }
+        if (currentMode === 'manual' && totalW !== 100) { errors.push(`Total weightage is ${totalW.toFixed(2)}%. Must equal exactly 100%.`); for (let i = 1; i <= count; i++) { const w = document.getElementById(`source-${i}-weightage`); if (w) w.classList.add('error-input'); } }
+        if (errors.length > 0) { displayErrors(errors); return false; }
+        document.querySelectorAll('.error-input').forEach(el => el.classList.remove('error-input'));
+        return true;
+      }
 
-  function displayErrors(errors){
-    const div=document.createElement('div');
-    div.className='bg-[#ffdad6] border border-[#e0a09a] rounded-xl p-4 animate-[fadeUp_0.25s_ease_both]';
-    div.innerHTML=`<div class="font-display font-bold text-xs text-[#ba1a1a] uppercase tracking-wide mb-2">Please fix these errors:</div>
-      <ul class="space-y-1">${errors.map(e=>`<li class="text-sm text-[#93000a] pl-3 relative before:content-['—'] before:absolute before:left-0 before:text-[#ba1a1a]">${e}</li>`).join('')}</ul>`;
-    resultDisplay.appendChild(div);
-  }
+      function displayErrors(errors) {
+        const div = document.createElement('div');
+        div.className = 'bg-[#ffdad6] border border-[#e0a09a] rounded-xl p-4 animate-[fadeUp_0.25s_ease_both]';
+        div.innerHTML = `<div class="font-display font-bold text-xs text-[#ba1a1a] uppercase tracking-wide mb-2">Please fix these errors:</div>
+      <ul class="space-y-1">${errors.map(e => `<li class="text-sm text-[#93000a] pl-3 relative before:content-['—'] before:absolute before:left-0 before:text-[#ba1a1a]">${e}</li>`).join('')}</ul>`;
+        resultDisplay.appendChild(div);
+      }
 
-  function clearMessages(){resultDisplay.innerHTML='';}
+      function clearMessages() { resultDisplay.innerHTML = ''; }
 
-  document.addEventListener('input',function(e){
-    if(e.target.classList.contains('error-input'))e.target.classList.remove('error-input');
-    if(resetBtn.textContent==='Undo'){undoSnapshot=null;updateResetBtn(false);}
-  });
+      document.addEventListener('input', function (e) {
+        if (e.target.classList.contains('error-input')) e.target.classList.remove('error-input');
+        if (resetBtn.textContent === 'Undo') { undoSnapshot = null; updateResetBtn(false); }
+      });
 
-  function calculateAggregate(){
-    const count=getSourceCount();let total=0;
-    for(let i=1;i<=count;i++){
-      const t=parseFloat(document.getElementById(`source-${i}-total`).value);
-      const o=parseFloat(document.getElementById(`source-${i}-obtained`).value);
-      const w=parseFloat(document.getElementById(`source-${i}-weightage`).value);
-      const aEl=document.getElementById(`source-${i}-additional`);const add=aEl?parseFloat(aEl.value||0):0;
-      total+=((o+add)/t)*w;
-    }
-    return Math.round(total*100)/100;
-  }
+      function calculateAggregate() {
+        const count = getSourceCount(); let total = 0;
+        for (let i = 1; i <= count; i++) {
+          const t = parseFloat(document.getElementById(`source-${i}-total`).value);
+          const o = parseFloat(document.getElementById(`source-${i}-obtained`).value);
+          const w = parseFloat(document.getElementById(`source-${i}-weightage`).value);
+          const aEl = document.getElementById(`source-${i}-additional`); const add = aEl ? parseFloat(aEl.value || 0) : 0;
+          total += ((o + add) / t) * w;
+        }
+        return Math.round(total * 100) / 100;
+      }
 
-  function displayResult(aggregate){
-    const pct=aggregate;
-    const colorClass=pct>=75?'#1a7a4a':pct>=50?'#b35a00':'#ba1a1a';
-    const bgClass=pct>=75?'#e8f5ee':pct>=50?'#fff3e5':'#fdecea';
-    const circumference=2*Math.PI*54;
-    const filled=circumference*(pct/100);
-    const empty=circumference-filled;
+      function displayResult(aggregate) {
+        const pct = aggregate;
+        const colorClass = pct >= 75 ? '#1a7a4a' : pct >= 50 ? '#b35a00' : '#ba1a1a';
+        const bgClass = pct >= 75 ? '#e8f5ee' : pct >= 50 ? '#fff3e5' : '#fdecea';
+        const circumference = 2 * Math.PI * 54;
+        const filled = circumference * (pct / 100);
+        const empty = circumference - filled;
 
-    const div=document.createElement('div');
-    div.className='fade-up';
-    div.innerHTML=`
+        const div = document.createElement('div');
+        div.className = 'fade-up';
+        div.innerHTML = `
       <div class="bg-white border-2 rounded-2xl p-6 text-center" style="border-color:${colorClass}20;background:${bgClass};">
         <div class="text-xs font-display font-bold uppercase tracking-widest text-[#74777f] mb-3">Your Aggregate</div>
         <div class="flex items-center justify-center mb-2">
@@ -638,13 +752,14 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         </div>
-        <div class="text-sm font-medium" style="color:${colorClass}">${pct>=75?'Great score!':pct>=50?'Decent score.':'Below average.'}</div>
+        <div class="text-sm font-medium" style="color:${colorClass}">${pct >= 75 ? 'Great score!' : pct >= 50 ? 'Decent score.' : 'Below average.'}</div>
       </div>`;
-    resultDisplay.innerHTML='';
-    resultDisplay.appendChild(div);
-    setTimeout(()=>{const circle=div.querySelector('.weightage-fill');if(circle){circle.style.strokeDashoffset='0';}},50);
-  }
-});
-</script>
+        resultDisplay.innerHTML = '';
+        resultDisplay.appendChild(div);
+        setTimeout(() => { const circle = div.querySelector('.weightage-fill'); if (circle) { circle.style.strokeDashoffset = '0'; } }, 50);
+      }
+    });
+  </script>
 </body>
+
 </html>

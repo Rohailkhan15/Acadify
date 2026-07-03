@@ -4,4 +4,4 @@ Allow: /
 # Block error page from being indexed
 Disallow: /404.html
 
-Sitemap: https://acadify.pages.dev/sitemap.xml
+Sitemap: https://acadrez.pages.dev/sitemap.xml

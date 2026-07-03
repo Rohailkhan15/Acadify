@@ -8,7 +8,7 @@
 
 **Acadrez** (formerly Acadify) is a free, browser-based aggregate calculator built for students applying to Pakistani universities. It eliminates the pain of hunting for scattered formulas and doing manual calculations by providing a single, fast, accurate tool.
 
-- **Live URL:** https://acadify.pages.dev/
+- **Live URL:** https://acadrez.pages.dev/
 - **Type:** Static website (no backend, no database, no login)
 - **Target audience:** Pakistani students applying to NUST, FAST, UET, COMSATS, and 15+ other universities
 
@@ -196,7 +196,7 @@ const universities = [
 - **Platform:** Cloudflare Pages (connected to GitHub repo)
 - **Deployment method:** Drag-and-drop file uploads via GitHub web UI → auto-deploys via Cloudflare Pages
 - **Build config:** None required — Cloudflare Pages serves static files directly
-- **Domain:** `acadify.pages.dev` (Cloudflare Pages default domain)
+- **Domain:** `acadrez.pages.dev` (Cloudflare Pages default domain)
 
 **Why Cloudflare Pages (not alternatives):**
 - Netlify free tier was exhausted quickly
@@ -242,7 +242,7 @@ Admission season (May–August) is the critical traffic window.
 The immediate product is an aggregate calculator. The broader vision for Acadrez is a wider educational services platform for Pakistani students — the name was chosen to allow expansion beyond just calculators. High-priority next steps:
 
 1. **Expand university directory** — highest-leverage product improvement
-2. **Custom domain** — move off `acadify.pages.dev` to a branded domain
+2. **Custom domain** — move off `acadrez.pages.dev` to a branded domain
 3. **Cutoff data** — if obtainable, show historical merit cutoffs alongside the calculated aggregate
 4. **Broader platform expansion** — admissions guidance, test prep resources, and other educational tools
 
